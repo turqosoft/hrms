@@ -262,9 +262,10 @@ const fieldsWithValues = computed(() => {
 })
 
 const approvalField = computed(() => {
-	return props.modelValue.doctype === "Expense Claim"
-		? "approval_status"
-		: "status"
+	return "status"
+	// return props.modelValue.doctype === "Expense Claim"
+	// 	? "approval_status"
+	// 	: "status"
 })
 
 const getSuccessMessage = ({ status = "", docstatus = 0 }) => {
