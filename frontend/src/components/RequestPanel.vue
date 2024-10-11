@@ -19,33 +19,37 @@ import { ref, inject, onMounted, computed, markRaw } from "vue"
 import TabButtons from "@/components/TabButtons.vue"
 import RequestList from "@/components/RequestList.vue"
 
-import { myLeaves, teamLeaves } from "@/data/leaves"
-import { myClaims, teamClaims } from "@/data/claims"
+// import { myLeaves, teamLeaves } from "@/data/leaves"
+// import { myClaims, teamClaims } from "@/data/claims"
 
-import LeaveRequestItem from "@/components/LeaveRequestItem.vue"
-import ExpenseClaimItem from "@/components/ExpenseClaimItem.vue"
+// import LeaveRequestItem from "@/components/LeaveRequestItem.vue"
+// import ExpenseClaimItem from "@/components/ExpenseClaimItem.vue"
 
 import { useListUpdate } from "@/composables/realtime"
 
 const activeTab = ref("My Requests")
 const socket = inject("$socket")
 
-const myRequests = computed(() => updateRequestDetails(myLeaves, myClaims))
+const myRequests = computed(() => 
+	// updateRequestDetails(myLeaves, myClaims)
+	updateRequestDetails(null, null)
+)
 
 const teamRequests = computed(() =>
-	updateRequestDetails(teamLeaves, teamClaims)
+	// updateRequestDetails(teamLeaves, teamClaims)
+	updateRequestDetails(null, null)
 )
 
 function updateRequestDetails(leaves, claims) {
-	const requests = [...(leaves.data || []), ...(claims.data || [])]
-	requests.forEach((request) => {
-		if (request.doctype === "Leave Application") {
-			request.component = markRaw(LeaveRequestItem)
-		} else if (request.doctype === "Expense Claim") {
-			request.component = markRaw(ExpenseClaimItem)
-		}
-	})
-	return getSortedRequests(requests)
+	// const requests = [...(leaves.data || []), ...(claims.data || [])]
+	// requests.forEach((request) => {
+	// 	if (request.doctype === "Leave Application") {
+	// 		request.component = markRaw(LeaveRequestItem)
+	// 	} else if (request.doctype === "Expense Claim") {
+	// 		request.component = markRaw(ExpenseClaimItem)
+	// 	}
+	// })
+	// return getSortedRequests(requests)
 }
 
 function getSortedRequests(list) {
@@ -58,7 +62,7 @@ function getSortedRequests(list) {
 }
 
 onMounted(() => {
-	useListUpdate(socket, "Leave Application", () => teamLeaves.reload())
-	useListUpdate(socket, "Expense Claim", () => teamClaims.reload())
+	// useListUpdate(socket, "Leave Application", () => teamLeaves.reload())
+	// useListUpdate(socket, "Expense Claim", () => teamClaims.reload())
 })
 </script>
