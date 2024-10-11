@@ -126,9 +126,9 @@ import {
 } from "frappe-ui"
 
 import TabButtons from "@/components/TabButtons.vue"
-import LeaveRequestItem from "@/components/LeaveRequestItem.vue"
-import ExpenseClaimItem from "@/components/ExpenseClaimItem.vue"
-import EmployeeAdvanceItem from "@/components/EmployeeAdvanceItem.vue"
+// import LeaveRequestItem from "@/components/LeaveRequestItem.vue"
+// import ExpenseClaimItem from "@/components/ExpenseClaimItem.vue"
+// import EmployeeAdvanceItem from "@/components/EmployeeAdvanceItem.vue"
 import ListFiltersActionSheet from "@/components/ListFiltersActionSheet.vue"
 import CustomIonModal from "@/components/CustomIonModal.vue"
 
@@ -162,11 +162,12 @@ const props = defineProps({
 	},
 })
 
-const listItemComponent = {
-	"Leave Application": markRaw(LeaveRequestItem),
-	"Expense Claim": markRaw(ExpenseClaimItem),
-	"Employee Advance": markRaw(EmployeeAdvanceItem),
-}
+// const listItemComponent = {
+// 	"Leave Application": markRaw(LeaveRequestItem),
+// 	"Expense Claim": markRaw(ExpenseClaimItem),
+// 	"Employee Advance": markRaw(EmployeeAdvanceItem),
+// }
+const listItemComponent = {}
 
 const router = useRouter()
 const socket = inject("$socket")
