@@ -17,7 +17,7 @@
     "postinstall": "yarn install-pwa-deps",
     "install-pwa-deps": "cd frontend && yarn install --check-files",
     "dev-pwa": "cd frontend && yarn dev",
-    "build": "yarn build-pwa && yarn build-roster",
+    "build": "yarn build-pwa",
     "build-pwa": "cd frontend && yarn build"
   },
   "dependencies": {
