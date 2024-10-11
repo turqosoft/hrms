@@ -24,10 +24,10 @@ add_to_apps_screen = [
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/hrms/css/hrms.css"
-app_include_js = [
-	"hrms.bundle.js",
-]
-app_include_css = "hrms.bundle.css"
+# app_include_js = [
+# 	"hrms.bundle.js",
+# ]
+# app_include_css = "hrms.bundle.css"
 
 # website
 
@@ -46,16 +46,16 @@ app_include_css = "hrms.bundle.css"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-doctype_js = {
-	"Employee": "public/js/erpnext/employee.js",
-	"Company": "public/js/erpnext/company.js",
-	"Department": "public/js/erpnext/department.js",
-	"Timesheet": "public/js/erpnext/timesheet.js",
-	"Payment Entry": "public/js/erpnext/payment_entry.js",
-	"Journal Entry": "public/js/erpnext/journal_entry.js",
-	"Delivery Trip": "public/js/erpnext/delivery_trip.js",
-	"Bank Transaction": "public/js/erpnext/bank_transaction.js",
-}
+# doctype_js = {
+# 	"Employee": "public/js/erpnext/employee.js",
+# 	"Company": "public/js/erpnext/company.js",
+# 	"Department": "public/js/erpnext/department.js",
+# 	"Timesheet": "public/js/erpnext/timesheet.js",
+# 	"Payment Entry": "public/js/erpnext/payment_entry.js",
+# 	"Journal Entry": "public/js/erpnext/journal_entry.js",
+# 	"Delivery Trip": "public/js/erpnext/delivery_trip.js",
+# 	"Bank Transaction": "public/js/erpnext/bank_transaction.js",
+# }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -71,41 +71,41 @@ doctype_js = {
 # 	"Role": "home_page"
 # }
 
-calendars = ["Leave Application"]
+# calendars = ["Leave Application"]
 
 # Generators
 # ----------
 
 # automatically create page for each record of this doctype
-website_generators = ["Job Opening"]
+# website_generators = ["Job Opening"]
 
-website_route_rules = [
-	{"from_route": "/hrms/<path:app_path>", "to_route": "hrms"},
-	{"from_route": "/hr/<path:app_path>", "to_route": "roster"},
-]
+# website_route_rules = [
+# 	{"from_route": "/hrms/<path:app_path>", "to_route": "hrms"},
+# 	{"from_route": "/hr/<path:app_path>", "to_route": "roster"},
+# ]
 # Jinja
 # ----------
 
 # add methods and filters to jinja environment
-jinja = {
-	"methods": [
-		"hrms.utils.get_country",
-	],
-}
+# jinja = {
+# 	"methods": [
+# 		"hrms.utils.get_country",
+# 	],
+# }
 
 # Installation
 # ------------
 
 # before_install = "hrms.install.before_install"
-after_install = "hrms.install.after_install"
-after_migrate = "hrms.setup.update_select_perm_after_install"
+# after_install = "hrms.install.after_install"
+# after_migrate = "hrms.setup.update_select_perm_after_install"
 
-setup_wizard_complete = "hrms.subscription_utils.update_erpnext_access"
+# setup_wizard_complete = "hrms.subscription_utils.update_erpnext_access"
 
 # Uninstallation
 # ------------
 
-before_uninstall = "hrms.uninstall.before_uninstall"
+# before_uninstall = "hrms.uninstall.before_uninstall"
 # after_uninstall = "hrms.uninstall.after_uninstall"
 
 # Integration Setup
@@ -114,14 +114,14 @@ before_uninstall = "hrms.uninstall.before_uninstall"
 # Name of the app being installed is passed as an argument
 
 # before_app_install = "hrms.utils.before_app_install"
-after_app_install = "hrms.setup.after_app_install"
+# after_app_install = "hrms.setup.after_app_install"
 
 # Integration Cleanup
 # -------------------
 # To clean up dependencies/integrations with other apps
 # Name of the app being uninstalled is passed as an argument
 
-before_app_uninstall = "hrms.setup.before_app_uninstall"
+# before_app_uninstall = "hrms.setup.before_app_uninstall"
 # after_app_uninstall = "hrms.utils.after_app_uninstall"
 
 # Desk Notifications
@@ -142,7 +142,7 @@ before_app_uninstall = "hrms.setup.before_app_uninstall"
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
-has_upload_permission = {"Employee": "erpnext.setup.doctype.employee.employee.has_upload_permission"}
+# has_upload_permission = {"Employee": "erpnext.setup.doctype.employee.employee.has_upload_permission"}
 
 # TQ::11102024::Comment start here
 # DocType Class
@@ -263,13 +263,13 @@ has_upload_permission = {"Employee": "erpnext.setup.doctype.employee.employee.ha
 # Testing
 # -------
 
-before_tests = "hrms.tests.test_utils.before_tests"
+# before_tests = "hrms.tests.test_utils.before_tests"
 
 # Overriding Methods
 # -----------------------------
 
 # get matching queries for Bank Reconciliation
-get_matching_queries = "hrms.hr.utils.get_matching_queries"
+# get_matching_queries = "hrms.hr.utils.get_matching_queries"
 
 # TQ::11102024::Comment start here
 # regional_overrides = {
@@ -294,9 +294,9 @@ global_search_doctypes = {
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
-override_doctype_dashboards = {
-	"Employee": "hrms.overrides.dashboard_overrides.get_dashboard_for_employee",
-}
+# override_doctype_dashboards = {
+# 	"Employee": "hrms.overrides.dashboard_overrides.get_dashboard_for_employee",
+# }
 
 # exempt linked doctypes from being automatically cancelled
 #
