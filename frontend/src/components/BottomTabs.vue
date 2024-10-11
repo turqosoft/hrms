@@ -39,16 +39,7 @@ const tabItems = [
 		title: "Home",
 		route: "/home",
 	},
-	{
-		icon: LeaveIcon,
-		title: "Leaves",
-		route: "/dashboard/leaves",
-	},
-	{
-		icon: ExpenseIcon,
-		title: "Expenses",
-		route: "/dashboard/expense-claims",
-	},
+	
 	{
 		icon: SalaryIcon,
 		title: "Salary",
